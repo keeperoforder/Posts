@@ -1,0 +1,156 @@
+/*
+Theme Name: ALlPoSTS
+Description: Показ всіх постів
+Version: 1.0
+Author: Богдан Жалоба
+*/
+
+@font-face {
+    font-family: 'Angista Script';
+    src: url('Angista Script.ttf') format('truetype');
+
+    
+}
+@font-face {
+    font-family: 'Blair ITC Medium';
+    src: url('Blair ITC Medium.ttf') format('truetype');
+
+    
+}
+body {
+    background-color: #F1ECE3;
+    text-align: center;
+
+}
+h1{
+    font-family: 'Angista Script';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 63.16px;
+}
+
+ul {
+    list-style: none; 
+    padding: 0; 
+    position: relative;
+}
+ul::after {
+    content: "";
+    display: block;
+    width: 1144px;
+    height: 1px;
+    background: #E5DBCE; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+li {
+    display: inline; 
+    margin-right: 10px; 
+    position: relative;
+}
+.category-link
+ {
+    font-family: 'Blair ITC Medium', sans-serif;
+    text-decoration: none; 
+    font-size: 11px;
+    transition: color 0.3s;
+}
+.category-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #CAB39F;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: 100% 0;
+    transition: transform 0.3s; 
+}
+
+.category-link:hover::after {
+    transform: scaleX(1); 
+}
+/* Стилазація постів*/
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.post-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 -10px 20px -10px;
+}
+
+.post {
+    width: calc(33.33% - 20px);
+    height: 370px; 
+    background: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    margin: 0 10px 20px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+    border: 1px solid #CAB39F;
+
+}
+
+.post:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.post-thumbnail {
+    width: 386px;
+    height: 280px;
+    margin: 0 auto 10px;
+}
+
+.post-thumbnail img {
+    max-width: 100%;
+    height:280px;
+}
+
+.post h2 {
+    font-family: 'Blair ITC Medium', sans-serif;
+    font-size: 11px;
+    line-height: 13.2px;
+    text-align: left;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.post div {
+    font-family: 'Blair ITC Medium', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/*load button*/
+.load-more-button {
+    font-family: 'Blair ITC Medium', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13.2px;
+    text-decoration: none;
+    color: #8B9075;
+    display: inline-block;
+    border-bottom: 2px solid #8B9075;
+    width: 93px;
+}
+
+.load-more-button:hover {
+    color: #000; 
+    border-bottom: 2px solid #000; 
+}
